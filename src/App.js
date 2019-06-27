@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import EditInPlace, { TextArea } from './editInPlace';
+
 function App() {
+
+  const [firstName, setFirstName] = useState('Vinicius');
+  const [lastName, setLastName] = useState('Braga');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EditInPlace viewAs="h1" value={firstName} onChangeValue={setFirstName}/>
+      {/* <EditInPlace viewAs="pre" value={lastName} onChangeValue={setLastName}/> */}
+      <TextArea viewAs="pre" value={lastName} onChangeValue={setLastName}/>
+
+      <hr/>
+      Name: {firstName} {lastName}
+
     </div>
+  
   );
 }
 
