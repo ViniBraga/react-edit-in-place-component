@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
-
 import EditInPlace, { TextArea } from './components/editInPlace';
+
+import './App.css';
 
 function App() {
 
