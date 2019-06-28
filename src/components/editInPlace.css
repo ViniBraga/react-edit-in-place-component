@@ -1,0 +1,9 @@
+.edit-in-place {
+    padding: 2px;
+}
+  
+.edit-in-place:hover {
+    background: yellow;
+    border: 1px dotted red;
+    padding: 0px;
+}

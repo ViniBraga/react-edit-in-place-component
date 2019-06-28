@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
  
+import './editInPlace.css';
+
 export const TextArea = ({ value, onChangeValue, viewAs }) => {
 
     const [ isEditing, setIsEditing ] = useState(false);
